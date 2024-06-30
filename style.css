@@ -203,18 +203,16 @@ body {
   border-radius: 20px;
   position: relative;
 }
-.self .image {
-  width: 100%;
-}
 .self .image img {
   border-top-left-radius: 20px; /* Adjust radius as needed */
   border-top-right-radius: 20px;
   width: 150px;
+  height: 200px;
 }
 .self p {
   padding-left: 30px;
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .self span {
   position: absolute;
@@ -222,7 +220,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  bottom: 65px;
+  bottom: 60px;
   left: 60px;
   border: 5px solid white;
 }
@@ -241,27 +239,65 @@ body {
 
 .story p {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 30px;
   color: white;
 }
 .story .image {
   border-radius: 20px;
   width: 150px;
-  height: 350px;
 }
-.story span {
+
+.story span img {
   position: absolute;
   top: 10px;
   left: 20px;
-  border-radius: 50px;
-  background-color: blue;
-  width: 53px;
-  height: 53px;
-}
-.story span img {
-  border-radius: 20px;
+  border: 5px solid blue;
   width: 40px;
+  border-radius: 50px;
   margin-left: 6px;
   margin-top: 6px;
+}
+.write-post-container{
+  margin-top: 15px;
+  width: 87%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  color: #626262;
+}
+.userprofile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.userprofile img{
+  width: 40px;
+  border-radius: 50%;
+}
+.userprofile p{
+  font-weight: 500;
+  color: #626262;
+}
+.userprofile small{
+  margin-top: 2px;
+  font-size: 13px;
+  display: flex;
+ align-items: center;
+}
+.userprofile small img{
+  width: 15px;
+}
+.post{
+  padding-left: 55px;
+  padding-top: 20px;
+
+}
+.post textarea{
+width: 100%;
+border-bottom: 1px solid #ccc;
+background: transparent;
+border: 0;
+outline: 0;
+resize: none;  
 }
