@@ -3,14 +3,27 @@
   padding: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
-body {
-  background-color: #efefef;
+:root{
+  --body-color:#efefef;
+  --nav-color:#1876f2;
+  --bg-color:#fff;
 }
+.darktheme{
+  --body-color:#0a0a0a;
+  --nav-color:#000;
+  --bg-color:#000;
+
+}
+body {
+  background-color: var(--body-color);
+  transition: all 0.5 ease-in-out;
+}
+
 .navigation-bar {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   position: sticky;
   top: 0;
   z-index: 1;
@@ -69,6 +82,7 @@ body {
 .profile-container .pic {
   width: 40px;
   border-radius: 100px;
+  cursor: pointer;
 }
 .container {
   display: flex;
@@ -86,12 +100,14 @@ body {
   flex-basis: 47%;
 }
 .right {
-  background: #fff;
+  background: var(--bg-color);
   flex-basis: 25%;
   position: sticky;
   top: 70px;
   padding: 20px;
   color: #626262;
+  height: 100vh;
+  overflow: scroll;
 }
 .links {
   height: 330px;
@@ -258,10 +274,10 @@ body {
   margin-left: 6px;
   margin-top: 6px;
 }
-.write-post-container{
+.write-post-container {
   margin-top: 15px;
   width: 87%;
-  background: #fff;
+  background: var(--bg-color);
   border-radius: 6px;
   padding: 20px;
   color: #626262;
@@ -271,33 +287,194 @@ body {
   align-items: center;
   gap: 10px;
 }
-.userprofile img{
+.userprofile img {
   width: 40px;
   border-radius: 50%;
 }
-.userprofile p{
+.userprofile p {
   font-weight: 500;
   color: #626262;
 }
-.userprofile small{
+.userprofile small {
   margin-top: 2px;
   font-size: 13px;
   display: flex;
- align-items: center;
+  align-items: center;
 }
-.userprofile small img{
+.userprofile small img {
   width: 15px;
 }
-.post{
+.post {
   padding-left: 55px;
   padding-top: 20px;
-
 }
-.post textarea{
-width: 100%;
-border-bottom: 1px solid #ccc;
-background: transparent;
-border: 0;
-outline: 0;
-resize: none;  
+.post textarea {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  resize: none;
+}
+.postlinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.postlinks a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #626262;
+}
+.postlinks a img {
+  width: 20px;
+  margin-right: 5px;
+}
+.post-container {
+  width: 87%;
+  border-radius: 7px;
+  background: var(--bg-color);
+  padding: 20px;
+  margin-top: 10px;
+}
+.userprofile span {
+  font-size: 13px;
+  color: #9a9a9a;
+}
+.post-container .posttext {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #9a9a9a;
+}
+.postimage {
+  width: 100%;
+  border-radius: 5px;
+  margin: 7px 0;
+}
+.likes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.activityicons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+.activityicons div img {
+  width: 16px;
+  margin-right: 10px;
+}
+.activityicons div {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.profileicons {
+  display: flex;
+  align-items: center;
+}
+.profileicons img {
+  width: 16px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.likes img {
+  width: 16px;
+}
+.load {
+  display: block;
+  margin: 15px auto;
+  cursor: pointer;
+  padding: 6px 10px;
+  border: 1px solid #9a9a9a;
+  color: #626262;
+  background: transparent;
+  border-radius: 5px;
+}
+.footer {
+  text-align: center;
+  color: #9a9a9a;
+  padding: 10px 0 20px;
+  font-size: 13px;
+}
+.settings {
+  position: absolute;
+  top: 65px;
+  right: 4%;
+  width: 350px;
+  height: 350px;
+  background: var(--bg-color);
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 12px;
+  display: none;
+}
+
+.userprofile a {
+  font-size: 12px;
+  color: #1876f2;
+  text-decoration: none;
+}
+.settings hr {
+  margin: 12px 0;
+  height: 1px;
+  border: 0;
+  background: #9a9a9a;
+}
+.settingslinks {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.settingslinks .settingsimage {
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.settingslinks a {
+  text-decoration: none;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  color: #626262;
+}
+.settingslinks img {
+  width: 10px;
+}
+.active {
+  display: block;
+}
+.dark{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ccc;
+  width: 45px;
+  border-radius:15px;
+  padding: 2px 3px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.dark span{
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+.on {
+  background: black;
+}
+
+.on span {
+  transform: translateX(27px); 
 }
