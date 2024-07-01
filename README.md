@@ -12,7 +12,7 @@
 
   <h2>Technologies Used</h2>
   <ul>
-    <li><strong>Frontend Framework:</strong> Built using React.js.</li>
+     <li><strong>Styling:</strong>HTML,CSS and JavaScript.</li>
     <li><strong>Styling:</strong> Utilized CSS and possibly CSS-in-JS libraries.</li>
     <li><strong>Other Libraries:</strong> Used icons from Font Awesome or similar libraries for UI elements.</li>
   </ul>
